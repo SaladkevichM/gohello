@@ -9,6 +9,8 @@ func main() {
 	var slice []int = primes[1:4]
 
 	fmt.Println(primes)
+	fmt.Println(len(slice))
+	fmt.Println(cap(slice))
 
 	slice[0] = 111
 

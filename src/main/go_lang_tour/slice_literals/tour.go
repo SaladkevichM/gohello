@@ -24,4 +24,7 @@ func main() {
 	fmt.Println(s)
 	fmt.Println(s[0])
 
+	fmt.Println(len(s))
+	fmt.Println(cap(s))
+
 }
