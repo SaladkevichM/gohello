@@ -4,7 +4,7 @@ import "fmt"
 
 // fib returns a function that returns
 // successive Fibonacci numbers.
-func fib() func() int {
+func fibonacci() func() int {
 	a, b := 0, 1
 	return func() int {
 		a, b = b, a+b
@@ -13,7 +13,8 @@ func fib() func() int {
 }
 
 func main() {
-	f := fib()
-	// Function calls are evaluated left-to-right.
-	fmt.Println(f(), f(), f(), f(), f(), f())
+	f := fibonacci()
+	for i := 0; i < 10; i++ {
+		fmt.Println(f())
+	}
 }
