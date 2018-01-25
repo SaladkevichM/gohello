@@ -2,17 +2,26 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func main() {
 
-	base := 1
-	channel := make(chan int)
+	channel := make(chan int, 1)
 
-	go func(channel chan int) {
-		base = base + 1
-		channel <- base
-	}(channel)
+	channel <- 1
+
+	go up(channel)
+
+	time.Sleep(1 * time.Second)
 
 	fmt.Println(<-channel)
+
+}
+
+func up(channel chan int) {
+
+	mid := <-channel + 1
+	channel <- mid
+
 }

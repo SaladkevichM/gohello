@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	ch := make(chan int, 1) // deadlock
+	ch := make(chan int, 2) // deadlock
 	ch <- 1
 	ch <- 2
 	fmt.Println(<-ch)
