@@ -1,0 +1,5 @@
+package: github.com/gohello
+import:
+- package: github.com/tour/reader
+- package: github.com/tour/tree
+- package: github.com/tour/wc
