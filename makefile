@@ -7,6 +7,9 @@ TARGET := 'stack_bin'
 VERSION := 1.0.0
 BUILD := `git rev-parse HEAD`
 
+# Use linker flags to provide version/build settings to the target
+LDFLAGS=-ldflags "-X=main.Version=$(VERSION) -X=main.Build=$(BUILD)"
+
 default: 
 	go build -o $(TARGET) -v ./src/main/stack/stack.go 
 
@@ -18,7 +21,7 @@ clean:
 	rm -f ./$(TARGET)
  
 run: clean 
-	go build -o $(TARGET) ./src/main/stack/stack.go 
+	go build $(LDFLAGS) -o $(TARGET) ./src/main/stack/stack.go 
 	./$(TARGET)
 
 #test: 
