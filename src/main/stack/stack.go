@@ -7,13 +7,13 @@ import (
 )
 
 // ErrEmptyStack describes empty stack error
-var ErrEmptyStack = errors.New("Stack is empty")
+var ErrEmptyStack = errors.New("stack is empty")
 
 // ErrStackIsFull describes full stack error
-var ErrStackIsFull = errors.New("Stack is full")
+var ErrStackIsFull = errors.New("stack is full")
 
 // ErrElementIsNil describes that element is nil
-var ErrElementIsNil = errors.New("Element is nil")
+var ErrElementIsNil = errors.New("element is nil")
 
 // Item holds element of the stack
 type Item struct {
