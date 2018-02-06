@@ -91,6 +91,10 @@ func insert(t *Tree, v int) *Tree {
 	return t
 }
 
+func init() {
+	fmt.Println("Init func")
+}
+
 func main() {
 	t1 := New(100, 1)
 	fmt.Println(Compare(t1, New(100, 1)), "Same Contents")

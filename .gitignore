@@ -2,4 +2,6 @@
 /pkg/
 *_bin
 debug
-.idea
+/.idea/
+/.settings/
+/.vscode/
